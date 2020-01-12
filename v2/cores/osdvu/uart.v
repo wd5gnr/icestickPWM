@@ -96,7 +96,7 @@
 //** SIGNAL DECLARATIONS **************************************
 
     reg [log2(one_baud_cnt * 16)-1:0] rx_clk;
-    reg [log2(one_baud_cnt)-1:0] tx_clk;
+    reg [log2(one_baud_cnt * 32)-1:0] tx_clk;
 
     reg [2:0] recv_state = RX_IDLE;
     reg [3:0] rx_bits_remaining;
