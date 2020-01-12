@@ -136,6 +136,7 @@
         if (rst) begin
             recv_state = RX_IDLE;
             tx_state = TX_IDLE;
+            tx_out = 1;
         end
                               
         // Countdown timers for the receiving and transmitting
@@ -275,6 +276,7 @@
                     tx_bits_remaining = 8;
                     tx_state = TX_SENDING;
                 end
+             
             end
             
             TX_SENDING: begin
